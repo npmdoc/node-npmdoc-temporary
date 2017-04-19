@@ -1,0 +1,658 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="http://github.com/vesln/temporary">temporary (v0.0.8)</a>
+</h1>
+<h4>The lord of tmp.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.temporary">module temporary</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.temporary.Dir">
+            function <span class="apidocSignatureSpan">temporary.</span>Dir
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.temporary.File">
+            function <span class="apidocSignatureSpan">temporary.</span>File
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">temporary.</span>Dir.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">temporary.</span>File.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">temporary.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.temporary.Dir">module temporary.Dir</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.temporary.Dir.Dir">
+            function <span class="apidocSignatureSpan">temporary.</span>Dir
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.temporary.Dir.prototype">module temporary.Dir.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.temporary.Dir.prototype.create">
+            function <span class="apidocSignatureSpan">temporary.Dir.prototype.</span>create
+            <span class="apidocSignatureSpan">(dirname)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.temporary.Dir.prototype.rmdir">
+            function <span class="apidocSignatureSpan">temporary.Dir.prototype.</span>rmdir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.temporary.Dir.prototype.rmdirSync">
+            function <span class="apidocSignatureSpan">temporary.Dir.prototype.</span>rmdirSync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.temporary.File">module temporary.File</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.temporary.File.File">
+            function <span class="apidocSignatureSpan">temporary.</span>File
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.temporary.File.prototype">module temporary.File.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.temporary.File.prototype.close">
+            function <span class="apidocSignatureSpan">temporary.File.prototype.</span>close
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.temporary.File.prototype.closeSync">
+            function <span class="apidocSignatureSpan">temporary.File.prototype.</span>closeSync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.temporary.File.prototype.create">
+            function <span class="apidocSignatureSpan">temporary.File.prototype.</span>create
+            <span class="apidocSignatureSpan">(filename)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.temporary.File.prototype.open">
+            function <span class="apidocSignatureSpan">temporary.File.prototype.</span>open
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.temporary.File.prototype.openSync">
+            function <span class="apidocSignatureSpan">temporary.File.prototype.</span>openSync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.temporary.File.prototype.readFile">
+            function <span class="apidocSignatureSpan">temporary.File.prototype.</span>readFile
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.temporary.File.prototype.readFileSync">
+            function <span class="apidocSignatureSpan">temporary.File.prototype.</span>readFileSync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.temporary.File.prototype.unlink">
+            function <span class="apidocSignatureSpan">temporary.File.prototype.</span>unlink
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.temporary.File.prototype.unlinkSync">
+            function <span class="apidocSignatureSpan">temporary.File.prototype.</span>unlinkSync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.temporary.File.prototype.writeFile">
+            function <span class="apidocSignatureSpan">temporary.File.prototype.</span>writeFile
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.temporary.File.prototype.writeFileSync">
+            function <span class="apidocSignatureSpan">temporary.File.prototype.</span>writeFileSync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.temporary" id="apidoc.module.temporary">module temporary</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.temporary.Dir" id="apidoc.element.temporary.Dir">
+        function <span class="apidocSignatureSpan">temporary.</span>Dir
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Dir(name) {
+  this.init(name);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	$ npm install temporary
+
+## Usage
+
+	var tmp = require('temporary');
+	var file = new tmp.File();
+	var dir = new tmp.<span class="apidocCodeKeywordSpan">Dir</span>();
+	
+	console.log(file.path); // path.
+	console.log(dir.path); // path.
+	
+	file.unlink();
+	dir.rmdir();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.temporary.File" id="apidoc.element.temporary.File">
+        function <span class="apidocSignatureSpan">temporary.</span>File
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function File(name) {
+  this.init(name);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Installation
+
+	$ npm install temporary
+
+## Usage
+
+	var tmp = require('temporary');
+	var file = new tmp.<span class="apidocCodeKeywordSpan">File</span>();
+	var dir = new tmp.Dir();
+	
+	console.log(file.path); // path.
+	console.log(dir.path); // path.
+	
+	file.unlink();
+	dir.rmdir();
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.temporary.Dir" id="apidoc.module.temporary.Dir">module temporary.Dir</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.temporary.Dir.Dir" id="apidoc.element.temporary.Dir.Dir">
+        function <span class="apidocSignatureSpan">temporary.</span>Dir
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Dir(name) {
+  this.init(name);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	$ npm install temporary
+
+## Usage
+
+	var tmp = require('temporary');
+	var file = new tmp.File();
+	var dir = new tmp.<span class="apidocCodeKeywordSpan">Dir</span>();
+	
+	console.log(file.path); // path.
+	console.log(dir.path); // path.
+	
+	file.unlink();
+	dir.rmdir();
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.temporary.Dir.prototype" id="apidoc.module.temporary.Dir.prototype">module temporary.Dir.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.temporary.Dir.prototype.create" id="apidoc.element.temporary.Dir.prototype.create">
+        function <span class="apidocSignatureSpan">temporary.Dir.prototype.</span>create
+        <span class="apidocSignatureSpan">(dirname)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (dirname) {
+  return fs.mkdirSync(path.normalize(dirname), 0777);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.temporary.Dir.prototype.rmdir" id="apidoc.element.temporary.Dir.prototype.rmdir">
+        function <span class="apidocSignatureSpan">temporary.Dir.prototype.</span>rmdir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rmdir = function () {
+  fs.rmdir.apply(fs, this.prepareArgs(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	var file = new tmp.File();
+	var dir = new tmp.Dir();
+	
+	console.log(file.path); // path.
+	console.log(dir.path); // path.
+	
+	file.unlink();
+	dir.<span class="apidocCodeKeywordSpan">rmdir</span>();
+
+## Methods
+
+### File
+
+- File.readFile
+- File.readFileSync
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.temporary.Dir.prototype.rmdirSync" id="apidoc.element.temporary.Dir.prototype.rmdirSync">
+        function <span class="apidocSignatureSpan">temporary.Dir.prototype.</span>rmdirSync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rmdirSync = function () {
+  return fs.rmdirSync.apply(fs, this.prepareArgs(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.temporary.File" id="apidoc.module.temporary.File">module temporary.File</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.temporary.File.File" id="apidoc.element.temporary.File.File">
+        function <span class="apidocSignatureSpan">temporary.</span>File
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function File(name) {
+  this.init(name);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Installation
+
+	$ npm install temporary
+
+## Usage
+
+	var tmp = require('temporary');
+	var file = new tmp.<span class="apidocCodeKeywordSpan">File</span>();
+	var dir = new tmp.Dir();
+	
+	console.log(file.path); // path.
+	console.log(dir.path); // path.
+	
+	file.unlink();
+	dir.rmdir();
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.temporary.File.prototype" id="apidoc.module.temporary.File.prototype">module temporary.File.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.temporary.File.prototype.close" id="apidoc.element.temporary.File.prototype.close">
+        function <span class="apidocSignatureSpan">temporary.File.prototype.</span>close
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">close = function () {
+  fs.close.apply(fs, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.temporary.File.prototype.closeSync" id="apidoc.element.temporary.File.prototype.closeSync">
+        function <span class="apidocSignatureSpan">temporary.File.prototype.</span>closeSync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">closeSync = function () {
+  return fs.closeSync.apply(fs, Array.prototype.slice.call(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.temporary.File.prototype.create" id="apidoc.element.temporary.File.prototype.create">
+        function <span class="apidocSignatureSpan">temporary.File.prototype.</span>create
+        <span class="apidocSignatureSpan">(filename)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (filename) {
+  return fs.writeFileSync(path.normalize(filename), '');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.temporary.File.prototype.open" id="apidoc.element.temporary.File.prototype.open">
+        function <span class="apidocSignatureSpan">temporary.File.prototype.</span>open
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">open = function () {
+  fs.open.apply(fs, this.prepareArgs(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.temporary.File.prototype.openSync" id="apidoc.element.temporary.File.prototype.openSync">
+        function <span class="apidocSignatureSpan">temporary.File.prototype.</span>openSync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">openSync = function () {
+  return fs.openSync.apply(fs, this.prepareArgs(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.temporary.File.prototype.readFile" id="apidoc.element.temporary.File.prototype.readFile">
+        function <span class="apidocSignatureSpan">temporary.File.prototype.</span>readFile
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readFile = function () {
+  fs.readFile.apply(fs, this.prepareArgs(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.temporary.File.prototype.readFileSync" id="apidoc.element.temporary.File.prototype.readFileSync">
+        function <span class="apidocSignatureSpan">temporary.File.prototype.</span>readFileSync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readFileSync = function () {
+  return fs.readFileSync.apply(fs, this.prepareArgs(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.temporary.File.prototype.unlink" id="apidoc.element.temporary.File.prototype.unlink">
+        function <span class="apidocSignatureSpan">temporary.File.prototype.</span>unlink
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unlink = function () {
+  fs.unlink.apply(fs, this.prepareArgs(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	var tmp = require('temporary');
+	var file = new tmp.File();
+	var dir = new tmp.Dir();
+	
+	console.log(file.path); // path.
+	console.log(dir.path); // path.
+	
+	file.<span class="apidocCodeKeywordSpan">unlink</span>();
+	dir.rmdir();
+
+## Methods
+
+### File
+
+- File.readFile
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.temporary.File.prototype.unlinkSync" id="apidoc.element.temporary.File.prototype.unlinkSync">
+        function <span class="apidocSignatureSpan">temporary.File.prototype.</span>unlinkSync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unlinkSync = function () {
+  return fs.unlinkSync.apply(fs, this.prepareArgs(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.temporary.File.prototype.writeFile" id="apidoc.element.temporary.File.prototype.writeFile">
+        function <span class="apidocSignatureSpan">temporary.File.prototype.</span>writeFile
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeFile = function () {
+  fs.writeFile.apply(fs, this.prepareArgs(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.temporary.File.prototype.writeFileSync" id="apidoc.element.temporary.File.prototype.writeFileSync">
+        function <span class="apidocSignatureSpan">temporary.File.prototype.</span>writeFileSync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeFileSync = function () {
+  return fs.writeFileSync.apply(fs, this.prepareArgs(arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
